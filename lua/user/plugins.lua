@@ -63,8 +63,6 @@ return packer.startup(function(use)
   use "folke/which-key.nvim"
   -- use "nvim-lua/plenary.nvim"
   use "windwp/nvim-spectre"
-  use "github/copilot.vim"
-  use "rust-lang/rust.vim"
   use "natecraddock/workspaces.nvim"
   use "anuvyklack/pretty-fold.nvim"
 
@@ -106,10 +104,7 @@ return packer.startup(function(use)
   -- Git
   use "lewis6991/gitsigns.nvim"
 
-
- -- Haskell syntax 
-  use "neovimhaskell/haskell-vim"
-  -- Automatically set up your configuration after cloning packer.nvim
+   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
     require("packer").sync()

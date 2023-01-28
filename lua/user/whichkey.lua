@@ -80,14 +80,9 @@ local opts = {
 
 local mappings = {
   ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
-  ["b"] = {
-    "<cmd>Telescope buffers<cr>",
-    "Buffers",
-  },
   ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
   ["w"] = { "<cmd>w!<CR>", "Save" },
   ["q"] = { "<cmd>q!<CR>", "Quit" },
-  ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["S"] = { "<cmd>lua require('spectre').open()<CR>", "Search and replace"},
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   ["f"] = {
@@ -104,6 +99,14 @@ local mappings = {
   ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
   ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 
+  b = {
+    name = "Buffer",
+    l= { "<cmd>Telescope buffers<cr>", "Buffers"},
+    c = { "<cmd>Bdelete!<CR>", "Close Buffer" },
+    n = { "<cmd>bnext!<CR>", "Next Buffer" },
+    p= { "<cmd>bprev!<CR>", "Prev Buffer" }
+  },
+
   p = {
     name = "Packer",
     c = { "<cmd>PackerCompile<cr>", "Compile" },
@@ -115,7 +118,6 @@ local mappings = {
 
   g = {
     name = "Git",
-    g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
     j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
     k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
     l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },

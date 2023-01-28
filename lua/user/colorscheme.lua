@@ -2,9 +2,8 @@
 
 vim.cmd [[
 try
- colorscheme catppuccin
- " colorscheme yowish
-catch /^Vim\%((\a\+)\)\=:E185/
+ colorscheme github_dark
+ catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
   set background=dark
 endtry
